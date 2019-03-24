@@ -44,3 +44,14 @@ void main(void) {
   color = vec4(vec3(v) / 8.0, 1.0);
 }
 ```
+
+## Links to Example
+
+* R32I Integer Texture
+    * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/r32i.html
+* R32UI Integer Texture
+    * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/r32ui.html
+* RGBA32I Integer Texture
+    * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/rgba32i.html
+* RGBA32UI Integer Texture
+    * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/rgba32ui.html
