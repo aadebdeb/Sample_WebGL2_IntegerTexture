@@ -1,35 +1,35 @@
 (function() {
 
     const WRITE_TO_TEXTURE_FRAGMENT_SHADER_SOURCE =
-  `#version 300 es
-  
-  precision highp float;
-  
-  out uvec4 value;
-  
-  void main(void) {
-    ivec2 coord = ivec2(gl_FragCoord.xy);
-    value = uvec4((coord.x + coord.y + ivec3(0, 2, 4)) % 8, 0);
-  }
-  `;
+`#version 300 es
+
+precision highp float;
+
+out uvec4 value;
+
+void main(void) {
+ivec2 coord = ivec2(gl_FragCoord.xy);
+value = uvec4((coord.x + coord.y + ivec3(0, 2, 4)) % 8, 0);
+}
+`;
   
     const RENDER_FRAGMENT_SHADER_SOURCE =
-  `#version 300 es
-  
-  precision highp float;
-  precision highp usampler2D;
-  
-  out vec4 color;
-  
-  uniform usampler2D tex;
-  uniform vec2 resolution;
-  
-  void main(void) {
-    vec2 uv = gl_FragCoord.xy / resolution;
-    uvec3 v = texture(tex, uv).rgb;
-    color = vec4(vec3(v) / 8.0, 1.0);
-  }
-  `
+`#version 300 es
+
+precision highp float;
+precision highp usampler2D;
+
+out vec4 color;
+
+uniform usampler2D tex;
+uniform vec2 resolution;
+
+void main(void) {
+vec2 uv = gl_FragCoord.xy / resolution;
+uvec3 v = texture(tex, uv).rgb;
+color = vec4(vec3(v) / 8.0, 1.0);
+}
+`
   
     function createTexture(gl, sizeX, sizeY) {
       const texture = gl.createTexture();
