@@ -55,3 +55,7 @@ void main(void) {
     * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/rgba32i.html
 * RGBA32UI Integer Texture
     * https://aadebdeb.github.io/Sample_WebGL2_IntegerTexture/rgba32ui.html
+
+## Link to Article (in Japanese)
+
+<a href="https://qiita.com/aa_debdeb/items/e40dedf26f57e86ff7b9">WebGL2でIntegerテクスチャへの書き込み&読み込み - Qiita</a>
